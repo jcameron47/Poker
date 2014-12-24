@@ -153,7 +153,7 @@ public class PokerWindow extends JPanel implements ActionListener
         ten.setActionCommand(cards.getCardTen());
         
         //Nine
-        JRadioButton nine = new JRadioButton(cards.getCardTen());
+        JRadioButton nine = new JRadioButton(cards.getCardNine());
         nine.setBounds(x, (5 * SPACING), length, width);
         nine.setMnemonic(KeyEvent.VK_6);
         nine.setActionCommand(cards.getCardNine());
@@ -164,6 +164,7 @@ public class PokerWindow extends JPanel implements ActionListener
         group.add(king);
         group.add(queen);
         group.add(jack);
+        group.add(ten);
         group.add(nine);
 
         //Register a listener for the radio buttons.
@@ -171,6 +172,7 @@ public class PokerWindow extends JPanel implements ActionListener
         king.addActionListener(this);
         queen.addActionListener(this);
         jack.addActionListener(this);
+        ten.addActionListener(this);
         nine.addActionListener(this);
         setLayout(null);
 
@@ -193,6 +195,7 @@ public class PokerWindow extends JPanel implements ActionListener
         radioPanel.add(king);
         radioPanel.add(queen);
         radioPanel.add(jack);
+        radioPanel.add(ten);
         radioPanel.add(nine);
 
         add(radioPanel);
